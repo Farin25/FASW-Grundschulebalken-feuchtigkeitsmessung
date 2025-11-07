@@ -1,0 +1,24 @@
+esphome:
+  name: test-ap
+  friendly_name: "Test AP"
+
+esp32:
+  board: esp32dev
+  framework:
+    type: arduino
+
+logger:
+  level: DEBUG
+
+wifi:
+  ap:
+    ssid: "ESP32-TEST-AP"     # KEIN Passwort -> offen
+    channel: 6                # ggf. 1 oder 11 probieren
+    ap_timeout: 0s
+    manual_ip:
+      static_ip: 192.168.4.1
+      gateway: 192.168.4.1
+      subnet: 255.255.255.0
+
+ota:
+  platform: esphome
