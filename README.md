@@ -65,8 +65,15 @@ neue Funktion:
 - Exportfunktion
 
 ## V2.5       
-**4.11.2025**  
-Kleine verbesserungen und bug fixes. 
+**4.11.2025** 
+
+Änderungen:
+- Kleine verbesserungen und bug fixes. 
+
+neue funktionen:
+- mDNS Hinzugefügt. webinbterface erreichbar unter sht31.local
+- Verionsnummer hinzugefügt
+- Link zum Source Code hinzugefügt
 
 #### Copyright (C) 2025 of [Farin](https://farin-langner.de)
  - Distributed under the terms of the GNU General Public License v3.0
