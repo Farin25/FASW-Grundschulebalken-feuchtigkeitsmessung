@@ -45,5 +45,28 @@ Das Gehäuse ist 3D Gedruckt die 3D Modellen sind im Ordner [Case](/Case/3D%20Dr
 
 Zur Stromversorgung wird ein Powerbank modul mit einer oder zwei 18650 Zeellen. Vom USB A Output vom Powerbank modul wird dann eine USB A Kabel was da eingesteckt wird am ESP Angeschloßen für die Stromversorgung wobei hierbei durch + ein Schalter kommt zum An und Aus Schalten. Der Sensor Wird an GPIO 21 und 22 Angeschloßen. Plus und minus Vom Sensor Kommt dann mit dem USB A Kabel an Plus und Minus vom ESP. Optional kann mit einem Vorwiederstand noch eine Power LED Zwischen Plus und Minus Geschaltet Werden.
 
+# Changelog
+
+## V1.0       
+**4.11.2025**  
+
+Erste version relativ einfachgehalten nur Grundfunktionen:  
+- Live Datenauslessen
+- Debug Logs
+
+## V2.0       
+**4.11.2025**  
+
+Wechsel  auf c++.
+neue Funktion:
+- Modernes Webinterface
+- Live Werte im Webiterfaec
+- Darstellung der Live werte in Diagrammen
+- Exportfunktion
+
+## V2.5       
+**4.11.2025**  
+Kleine verbesserungen und bug fixes. 
+
 #### Copyright (C) 2025 of [Farin](https://farin-langner.de)
  - Distributed under the terms of the GNU General Public License v3.0
