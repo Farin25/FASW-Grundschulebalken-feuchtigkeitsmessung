@@ -3,9 +3,9 @@
 #include <Wire.h>
 #include <Adafruit_SHT31.h>
 
-//// ---------- Einstellungen ----------
+
 const char* AP_SSID = "Grundschulbalken";
-const char* AP_PASS = "12345678";       // min. 8 Zeichen
+const char* AP_PASS = "12345678";     
 const IPAddress AP_IP(192,168,4,1);
 const IPAddress AP_GW(192,168,4,1);
 const IPAddress AP_MASK(255,255,255,0);
@@ -13,8 +13,8 @@ const IPAddress AP_MASK(255,255,255,0);
 // I2C-Pins ESP32
 constexpr int I2C_SDA = 21;
 constexpr int I2C_SCL = 22;
-constexpr uint8_t SHT_ADDR = 0x44;      // 0x44 Standard, 0x45 alternative
-//// -----------------------------------
+constexpr uint8_t SHT_ADDR = 0x44;    
+
 
 Adafruit_SHT31 sht31 = Adafruit_SHT31();
 WebServer server(80);
@@ -86,11 +86,11 @@ void readSensorIfDue() {
     lastT = t;
     lastH = h;
   } else {
-    // einmal Adresse umschalten und erneut versuchen
+    // fals es nicht funktioniert einmal Adresse umschalten und erneut versuchen
     static bool toggled = false;
     if (!toggled) {
       toggled = true;
-      // versuche zweite Adresse
+      // versuch der zweite Adresse
       uint8_t alt = (SHT_ADDR == 0x44) ? 0x45 : 0x44;
       sht31 = Adafruit_SHT31();
       if (sht31.begin(alt)) {
@@ -105,7 +105,7 @@ void setup() {
   Serial.begin(115200);
   delay(200);
 
-  // I2C
+
   Wire.begin(I2C_SDA, I2C_SCL);
 
   if (!sht31.begin(SHT_ADDR)) {
@@ -114,9 +114,9 @@ void setup() {
       Serial.println("[SHT31] Sensor nicht erreichbar.");
     }
   }
-  sht31.heater(false); // Heizer aus
+  sht31.heater(false);
 
-  // SoftAP konfigurieren
+
   WiFi.mode(WIFI_AP);
   WiFi.softAPConfig(AP_IP, AP_GW, AP_MASK);
   if (WiFi.softAP(AP_SSID, AP_PASS)) {
@@ -126,7 +126,7 @@ void setup() {
     Serial.println("SoftAP Start FEHLGESCHLAGEN!");
   }
 
-  // HTTP-Server
+
   server.on("/", handleRoot);
   server.on("/api", handleApi);
   server.onNotFound([](){ server.send(404, "text/plain", "Not found"); });
