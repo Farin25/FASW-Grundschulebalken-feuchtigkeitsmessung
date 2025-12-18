@@ -76,4 +76,4 @@ neue funktionen:
 - Link zum Source Code hinzugefügt
 
 #### Copyright (C) 2025 of [Farin](https://farin-langner.de)
- - Distributed under the terms of the GNU General Public License v3.0
+ - Distributed under the terms of the MIT License
