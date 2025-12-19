@@ -421,9 +421,7 @@ String twoDigits(int v) {
   return String(v);
 }
 
-// CSV-Export der gespeicherten Daten:
-// Tag;Zeit;Temperatur;Luftfeuchtigkeit
-// z.B. 0;00:01:20;="23.45";="56.7"
+
 void handleExport() {
   String csv = "Tag;Zeit;Temperatur;Luftfeuchtigkeit\n";
   for (size_t i = 0; i < sampleCount; i++) {
